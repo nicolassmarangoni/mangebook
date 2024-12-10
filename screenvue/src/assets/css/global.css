@@ -1,0 +1,44 @@
+
+/* Tema claro (padrão) */
+:root {
+    --button-bg-primary: #3366FF;
+    --button-bg-secondary: #3366FF;
+    --text-light: #8f8c8c;
+    --text-dark: #202020;
+    --main-section-bg: #F7F5FD;
+    --border-light: #ebe3e3;
+    --background-color: #ffffff;
+}
+
+/* Tema escuro */
+.dark-mode {
+    --button-bg-primary: #444444;
+    --button-bg-secondary: #222222;
+    --text-light: #CCCCCC;
+    --text-dark: #f0f0f0;
+    --main-section-bg: #1a1a1a;
+    --border-light: #555555;
+    --background-color: #121212;
+}
+
+/* Usando as variáveis no body */
+body {
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+/* Estilização do botão (ícone) para parecer clicável */
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    color: #0b35b4;
+}

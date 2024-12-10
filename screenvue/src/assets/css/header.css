@@ -1,0 +1,112 @@
+header {
+    height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+header .logo-wrapper img {
+    width: 200px;
+    height: 198px;
+}
+
+header .logo-wrapper p {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-dark);
+}
+
+header .enter-wrapper {
+    display: none;
+    color: black;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+@media (min-width: 640px) {
+    
+    header {
+        height: 100px;
+    }
+
+    header .enter-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.3rem;
+        text-decoration: none;
+    }
+
+    header .enter-wrapper p {
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+
+    header .enter-wrapper p:hover {
+        text-decoration: none;
+    }
+
+    header .enter-wrapper button {
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+        width: 153px;
+        height: 54px;
+        color: white;
+        background-color: var(--button-bg-primary);
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .3s ease;
+    }
+
+    header .enter-wrapper button:hover {
+        background-color: #1750f9;
+        text-decoration: none;
+    }
+}
+
+/* Navbar Links */
+header .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+header .nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #1750f9;
+}
+
+/* Estilos responsivos */
+@media (min-width: 640px) {
+    header .nav-links {
+        display: flex;
+    }
+}
+
+@media (max-width: 640px) {
+    header .nav-links {
+        display: none; /* Oculta a navbar em telas pequenas, pode-se adicionar um menu hambúrguer se necessário */
+    }
+}

@@ -1,0 +1,56 @@
+/* Geral */
+body {
+    background-color: black;
+    color: white; /* Adiciona cor padrão para texto */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white; /* Define a cor dos títulos */
+}
+
+.text-light {
+    color: #f8f9fa; /* Definição de cor clara para o texto */
+}
+
+/* Navegação */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.navbar-brand {
+    margin-right: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-item {
+    color: #ffffff; /* Cor branca para as escritas */
+}
+
+.nav-link.active {
+    color: #ffcc00; /* Cor amarela para o item ativo */
+}
+
+/* Estilo das imagens */
+.img-fluid {
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% no hover */
+}
+.custom-container {
+    background-color: black; /* Muda o fundo do container para preto */
+    padding: 20px;  /* Padding opcional para dar um respiro ao conteúdo */
+    border-radius: 10px;  /* Opcional: borda arredondada para um visual mais limpo */
+  }
+  
+  /* Adiciona cor branca para o texto dentro do container */
+  .custom-container h2,
+  .custom-container p,
+  .custom-container .nav-link,
+  .custom-container .img-fluid {
+    color: white;
+  }
+  

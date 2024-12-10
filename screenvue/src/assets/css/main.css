@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Jost:wght@400;700&display=swap');
+
+main {
+    width: 100%;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que ocupa a altura total da tela */
+    background-color: var(--main-section-bg);
+}
+
+.main-section .section-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+main .main-section h1 {
+    font-size: 3.125rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+}
+
+main .main-section p {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 3.5rem;
+}
+
+main .main-section button {
+    width: 203px;
+    height: 64px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--button-bg-secondary);
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+main .main-section button:hover {
+    background-color: #fbe4a9;
+}
+
+main .main-section img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* Login Container */
+.main-section .login-container {
+    background-color: #ffffff; /* Fundo branco para destaque */
+    width: 450px; /* Aumentado para dar mais espaço */
+    padding: 2.5rem; /* Aumentado o padding para mais espaçamento interno */
+    margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-section .login-container h1 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.main-section .login-container input {
+    width: 100%;    
+    padding: 1rem; /* Aumentado o padding para campos maiores */
+    margin: 1.5rem 0; /* Maior espaço entre os campos */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.main-section .login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--button-bg-secondary);
+    border: black 1px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.main-section .login-container button:hover {
+    background-color: #0811bb;
+}
+
+/* Video Section */
+.video-section {
+    width: 100%;
+    height: 300px;
+    background-color: #F2FAF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-section .video {
+    width: 319px;
+    height: 192px;
+}
+
+/* Logos Section */
+.logos-section {
+    width: 100%;
+    height: 160px;
+    display: flex;
+}
+
+.logos-section .logos-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 1.8rem 0;
+}
+
+.logos-section .logos-wrapper img {
+    height: 21px;
+}
+
+/* Features Section */
+.features-section {
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+}
+
+.features-section .features-wrapper {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.features-section .card img {
+    margin-bottom: 2.2rem;
+}
+
+.features-section .card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.features-section .card p {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 300;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+/* Feedback Section */
+.feedback-section {
+    width: 100%;
+    background-color: #ECE7FB;
+    padding: 1.8rem 0;
+}
+
+.feedback-section .feedback-wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.feedback-section .feedback-wrapper .img-profile {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    margin-bottom: 2.8rem;
+}
+
+.feedback-section .feedback-wrapper .text-wrapper img {
+    width: 61px;
+    height: 45px;
+    margin-bottom: 1rem;
+}
+
+.feedback-section .feedback-wrapper .text-wrapper h4 {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.feedback-section .feedback-wrapper .text-wrapper p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    width: 100%;
+    background-color: #FCFAF5;
+}
+
+.contact-us-section .section-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.contact-us-section h1 {
+    font-size: 3.125rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+}
+
+.contact-us-section p {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 3.5rem;
+}
+
+.contact-us-section button {
+    width: 203px;
+    height: 64px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-bg-secondary);
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.contact-us-section button:hover {
+    background-color: #fbe4a9;
+}
+
+.contact-us-section img {
+    width: 100%;
+    aspect-ratio: 1.2/1;
+}
+
+/* Responsive Layout Adjustments */
+@media (min-width: 760px) {
+    /* Main Section */
+    main .main-section .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main .main-section .section-wrapper .text-wrapper {
+        text-align: start;
+        width: 466px;
+    }
+
+    main .main-section .section-wrapper img {
+        width: 500px;
+        height: 460px;
+    }
+
+    main .main-section h1 {
+        font-size: 5rem;
+        line-height: 5.3rem;
+    }
+
+    /* Video Section */
+    .video-section {
+        height: 600px;
+    }
+
+    .video-section .video {
+        width: 765px;
+        height: 460px;
+    }    
+
+    /* Logos Section */
+    .logos-section {
+        height: 200px;
+    }
+
+    .logos-section .logos-wrapper img {
+        height: 35px;
+    }
+
+    .logos-section .logos-wrapper {
+        width: 75%;
+        justify-content: space-between;
+    }
+
+    /* Features Section */
+    .features-section {
+        height: 500px;
+    }
+
+    .features-section .features-wrapper {
+        flex-direction: row;
+        width: 85%;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    /* Feedback Section */
+    .feedback-section {
+        height: 500px;
+        padding: 0;
+        display: flex;
+    }
+
+    .feedback-section .feedback-wrapper .img-profile {
+        width: 353px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .feedback-section .feedback-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5rem;
+    }
+
+    .feedback-section .feedback-wrapper .text-wrapper {
+        width: 418px;
+        text-align: justify;
+    }
+
+    /* Contact Us Section */
+    .contact-us-section .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-us-section .section-wrapper .text-wrapper {
+        text-align: start;
+        width: 466px;
+    }
+
+    .contact-us-section .section-wrapper img {
+        width: 565px;
+        height: 460px;
+    }
+}
