@@ -15,7 +15,13 @@
               <router-link class="nav-link active" to="/ativos">INICIO</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/login">LOGIN</router-link>
+              <!-- Modificando o link LOGIN para realizar o logout antes de redirecionar -->
+              <router-link 
+                class="nav-link" 
+                to="/" 
+                @click.prevent="logout">
+                Logout
+              </router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/gerenciamento">GERENCIAMENTO DE LIVROS</router-link>
