@@ -27,6 +27,9 @@
         </form>
       </div>
     </div>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+      <p>&copy; 2024 Bibliotech. Todos os direitos reservados.</p>
+    </footer>
   </div>
 </template>
 

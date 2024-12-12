@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="fotos/B.png" alt="Bibliotech" style="height: 30px;">
+          <img src="../assets/images/B.png" alt="Bibliotech" style="height: 30px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
           <span class="navbar-toggler-icon"></span>
