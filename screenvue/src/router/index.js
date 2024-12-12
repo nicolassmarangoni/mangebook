@@ -6,6 +6,7 @@ import Register from '../components/RegisterComponent.vue';
 import Gerenciar from '../components/GerenciarComponent.vue'
 import MinhasReservas from '@/components/MinhasReservas.vue';
 
+
 Vue.use(VueRouter);
 
 const routes = [

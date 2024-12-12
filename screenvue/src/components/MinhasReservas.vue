@@ -15,7 +15,6 @@
               <router-link class="nav-link active" to="/">INICIO</router-link>
             </li>
             <li class="nav-item">
-              <!-- Modificando o link LOGIN para realizar o logout antes de redirecionar -->
               <router-link 
                 class="nav-link" 
                 to="/" 
@@ -43,7 +42,6 @@
     </div>
     <!-- Livros Reservados -->
     <div class="container custom-container mt-4">
-
       <div class="row mt-3">
         <div v-if="filteredBooks.length === 0" class="col-12">
           <p class="text-center">Nenhum livro reservado encontrado.</p>
@@ -52,7 +50,7 @@
         <!-- Cards dos livros -->
         <div v-for="book in filteredBooks" :key="book._id" class="col-md-3 mb-4">
           <div class="card">
-            <img :src="`http://localhost:3000/${book.image}`" class="img-fluid" :alt="book.title" />
+            <img :src="`http://localhost:3000/${book.image}`" class="card-img-top" :alt="book.title" />
             <div class="card-body">
               <h5 class="card-title">{{ book.title }}</h5>
               <p class="card-text">Autor: {{ book.author }}</p>
@@ -70,7 +68,6 @@
       <p>&copy; 2024 Bibliotech. Todos os direitos reservados.</p>
     </footer>
   </div>
-  
 </template>
 
 <script setup>
@@ -79,12 +76,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
 import { ref, onMounted, computed } from 'vue';
 
-// Variáveis reativas
 const books = ref([]);
 const searchQuery = ref('');
 const userID = ref(null);
 
-// Buscar livros reservados
 const fetchReservedBooks = async () => {
   try {
     const response = await axios.get('http://localhost:3000/api/livros');
@@ -102,24 +97,20 @@ const fetchReservedBooks = async () => {
   }
 };
 
-// Computed para buscar livros
 const filteredBooks = computed(() => {
   return books.value.filter(book => 
     book.title.toLowerCase().includes(searchQuery.value.toLowerCase())
   );
 });
 
-// Recupera userId
 onMounted(() => {
   const storedUserId = localStorage.getItem('userId');
   if (storedUserId) {
     userID.value = storedUserId;
-    console.log('User ID recuperado:', userID.value);
   }
   fetchReservedBooks();
 });
 
-// Verificar se está reservado
 const checkIfReserved = async (bookId) => {
   try {
     const response = await axios.get(`http://localhost:4000/api/reservas/${bookId}`);
@@ -130,7 +121,6 @@ const checkIfReserved = async (bookId) => {
   }
 };
 
-// Cancelar reserva
 const cancelReservation = async (book) => {
   try {
     if (!userID.value) {
@@ -160,7 +150,7 @@ body {
 
 .custom-container {
   background-color: rgb(0, 0, 0);
-  padding: 5px 10px 10px 10px; /* Menos espaço no topo */
+  padding: 10px;
   border-radius: 10px;
   max-width: 1100px;
   margin: 0 auto;
@@ -169,37 +159,57 @@ body {
 .card {
   background-color: #333;
   color: white;
-  margin-top: -200px; /* Cartão subindo um pouco */
 }
 
-.cancel-reservation-btn {
-  font-size: 1rem;
+.card-body button {
+  margin-top: 10px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
-  width: 100%;
-  padding: 15px;
-  background-color: #dc3545;
-  border: none;
-  border-radius: 5px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+footer {
+  background-color: #333;
   color: white;
 }
 
-.cancel-reservation-btn:hover {
-  background-color: #b02a37;
+.text-center {
+  text-align: center;
 }
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* Estilo específico do container que contém o header */
 .container.mt-2 {
-  background-color: #333; /* Cor de fundo */
-  padding: 10px; /* Ajuste de padding */
-  border-radius: 8px; /* Bordas arredondadas */
-  margin-top: 20px; /* Margem superior */
-  text-align: center; /* Alinhamento centralizado do texto */
-  height: 200px;
+  background-color: #333;  /* Cor de fundo */
+  padding: 10px;            /* Espaçamento dentro do container */
+  border-radius: 8px;       /* Bordas arredondadas */
+  margin-top: 20px;         /* Margem superior */
+  text-align: center;       /* Centraliza o conteúdo */
+  height: 100px;            /* Define uma altura para o container */
+  display: flex;            /* Para centralizar o título de forma flexível */
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
 }
+
+/* Estilo do título dentro do container */
 .header-title {
-  font-size: 3rem; /* Tamanho reduzido para o header */
-  padding: 5px 0; /* Menos espaço ao redor do título */
-  margin: 0;
-  font-weight: normal;
+  font-size: 2rem;          /* Tamanho menor do título */
+  font-weight: normal;      /* Peso da fonte normal */
+  color: white;             /* Cor do texto */
+  margin: 0;                /* Remove margem padrão */
+  padding: 0;               /* Remove padding extra */
 }
 </style>
